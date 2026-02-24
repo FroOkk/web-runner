@@ -41,6 +41,15 @@ armv7l: dist = web-$(package_arch)
 armv7l: dest = build/$(dist)
 armv7l: build-armv7l
 
+# 64-bit ARM
+aarch64: arm64
+arm64: electron_arch = arm64
+arm64: flash_arch =
+arm64: package_arch = arm64
+arm64: dist = web-$(package_arch)
+arm64: dest = build/$(dist)
+arm64: build-arm64
+
 build-%:
 	@echo "Building $(dist)"
 	rm -rf "$(dest)"
